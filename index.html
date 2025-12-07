@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça Lily - Uma doce mistura de Dachshund buscando uma casa com amor</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Conheça Lily - Uma doce mistura de Dachshund buscando uma casa com amor">
+    <meta property="og:description" content="Lily é uma linda sausicha pretinha, misturada, com uma gentil e amável personalidade. Ela está procurando um novo lar cheio de amor.">
+    <meta property="og:image" content="lili4.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conheça Lily - Uma doce mistura de Dachshund buscando uma casa com amor">
+    <meta name="twitter:description" content="Lily é uma linda sausicha pretinha, misturada, com uma gentil e amável personalidade. Ela está procurando um novo lar cheio de amor.">
+    <meta name="twitter:image" content="lili4.jpeg">
+    
+    <!-- WhatsApp -->
+    <meta property="og:site_name" content="Adote a Lily">
+    <meta property="og:locale" content="pt_BR">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 40px 20px;
+        }
+        
+        .banner {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 32px;
+            font-style: italic;
+            opacity: 0.95;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+        
+        .photo-container {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .content {
+            padding: 60px 80px;
+            background: #fafafa;
+        }
+        
+        .info-section {
+            margin-bottom: 40px;
+        }
+        
+        .info-section h2 {
+            font-size: 36px;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .info-section h2::before {
+            content: "🐾";
+            font-size: 32px;
+        }
+        
+        .info-section p, .info-section ul {
+            font-size: 24px;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .info-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-section li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info-section li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-section li strong {
+            color: #764ba2;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-section p {
+            font-size: 28px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .contact-box {
+            background: white;
+            color: #667eea;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .heart {
+            font-size: 40px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            
+            .banner {
+                border-radius: 0;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 36px;
+                letter-spacing: 1px;
+            }
+            
+            .header .subtitle {
+                font-size: 18px;
+            }
+            
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .info-section h2 {
+                font-size: 24px;
+            }
+            
+            .info-section h2::before {
+                font-size: 20px;
+            }
+            
+            .info-section p, .info-section ul {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            .info-section li strong {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+                margin-top: 20px;
+                border-radius: 15px;
+            }
+            
+            .cta-section h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            
+            .cta-section p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            .contact-box {
+                padding: 20px;
+                font-size: 20px;
+                margin-top: 20px;
+            }
+            
+            .heart {
+                font-size: 28px;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .banner {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="header">
+            <h1>Conheça Lily <span class="heart">❤️</span></h1>
+            <p class="subtitle">Uma alma gentil buscando seu novo lar com amor</p>
+        </div>
+        
+        <div class="photo-grid">
+            <div class="photo-container">
+                <img src="lili1.jpeg" alt="Lily relaxing">
+            </div>
+            <div class="photo-container">
+                <img src="lili2.jpeg" alt="Lily's sweet face">
+            </div>
+            <div class="photo-container">
+                <img src="lili3.jpeg" alt="Lily enjoying sunshine">
+            </div>
+            <div class="photo-container">
+                <img src="lili4.jpeg" alt="Happy Lily">
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="info-section">
+                <h2>Sobre a Lily</h2>
+                <p>
+                    Lily é uma linda sausicha pretinha, misturada, como uma gentil e amável personalidade.
+                    Com suas adoráveis pernas curtas, corpo comprido, e seu peitoral branco e doce, ela é a 
+                    companheira perfeita para encher seu lar de amor e alegria.</p>
+            </div>
+            
+            <div class="info-section">
+                <h2>Sobre a Lily</h2>
+                <ul>
+                    <li><strong>Raça:</strong> Dachshund misturada</li>
+                    <li><strong>Cor:</strong> Preto com peitoral Branco</li>
+                    <li><strong>Tamanho:</strong> Pequena (Dachshund clássico)</li>
+                    <li><strong>Personalidade:</strong> Gentil, Calma, Não é de latir atoa</li>
+                    <li><strong>Ideal para:</strong> Famílias, crianças e indivíduos</li>
+                    <li><strong>Castrada:</strong> Sim</li>
+                    <li><strong>Vacinada:</strong> Sim e em dia</li>
+                </ul>
+            </div>
+            
+            <div class="info-section">
+                <h2>O Que Faz a Lily Especial</h2>
+                <p>
+                    Lily é uma doce mocinha que tem sido uma companheira amável. Ela é calma, mas brincalhona,
+                    se comporta bem, faz necessidades apenas na grama ou espaço aberto, e amaria um novo lar que é aberto,
+                    amoroso, onde ela poderia aproveitar o espaço. Ela ama deitar no sol e tirar cochilos, e também ganhar carinho
+                    dos seus humanos favoritos.</p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>A Lily Poderia Ser Sua Nova Melhor Amiga?</h2>
+                <p>
+                    Devido a circunstâncias familiares, estamos buscando por um novo e maravilhoso dono para esta preciosa moça. 
+                    Ela merece uma família que dê amor e que vai cuidar e amar do mesmo tanto que a amamos.
+                </p>
+                <p>Se você está interessado em dar à Lily o lar de amor que ela merece, por favor contate-nos.</p>
+                <div class="contact-box">
+                    <a href="https://wa.me/5547992169982">📞 Chamar no WhatsApp!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
