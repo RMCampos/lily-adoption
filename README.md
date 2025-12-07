@@ -89,7 +89,7 @@ lily-adoption/
 
 ## CI/CD Pipeline
 
-This repository includes a GitHub Actions workflow that automatically builds and pushes a Docker image to Docker Hub on every push to the `main` branch.
+This repository includes a GitHub Actions workflow that automatically builds and pushes a Docker image to Docker Hub on every push to the `main` branch. Each build also creates a Git tag for version tracking.
 
 ### Setup Instructions
 
@@ -101,18 +101,26 @@ To enable the CI/CD pipeline, you need to add the following secrets to your GitH
    - `DOCKER_USERNAME`: Your Docker Hub username
    - `DOCKER_PASSWORD`: Your Docker Hub password or access token
 
-### Image Tags
+### Versioning and Tags
 
-The workflow automatically creates the following tags:
-- `latest`: Always points to the most recent build from the main branch
-- `main-<git-sha>`: Tagged with the branch name and commit SHA for version tracking
+The workflow automatically:
+- **Creates a Git tag** in the format `v{YYYY}.{MM}.{DD}.{run_number}` (e.g., `v2025.12.07.42`)
+- **Pushes the Git tag** to the repository
+- **Creates Docker image tags**:
+  - `v{YYYY}.{MM}.{DD}.{run_number}`: Version-specific tag
+  - `latest`: Always points to the most recent build from the main branch
+  - `main-<git-sha>`: Tagged with the branch name and commit SHA
 
 ### Using the Published Image
 
 Once the workflow runs successfully, you can pull the image from Docker Hub:
 
 ```bash
-docker pull <your-dockerhub-username>/lily-adoption:latest
+# Pull the latest version
+docker pull rmcampos/lily-adoption:latest
+
+# Or pull a specific version
+docker pull rmcampos/lily-adoption:v2025.12.07.42
 ```
 
 ## License
